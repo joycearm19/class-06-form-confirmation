@@ -1,5 +1,5 @@
 <header>
-  <h1 id="title"><?php echo $page_title; ?> - INFO 2300</h1>
+  <h1 id="title"><?php echo htmlspecialchars($page_title); ?> - INFO 2300</h1>
 
   <nav id="menu">
     <ul>

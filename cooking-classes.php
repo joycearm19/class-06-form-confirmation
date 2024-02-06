@@ -15,7 +15,7 @@ $nav_cooking_class = 'active_page';
 
   <main class="courses">
 
-    <h2><?php echo $page_title; ?></h2>
+    <h2><?php echo htmlspecialchars($page_title); ?></h2>
 
     <p>Welcome to Yoko's Kitchen!</p>
 
@@ -56,20 +56,20 @@ $nav_cooking_class = 'active_page';
 
       <p>Interesting in taking one of our cooking classes? Let us know which classes and we'll send you some information!</p>
 
-      <form id="request-form" novalidate>
+      <form id="request-form" action="cooking-confirmation.php" method="post" novalidate>
 
         <div class="form-label">
-          <input type="checkbox" id="request-vegetarian" />
+          <input type="checkbox" name="japanese-vegetarian" id="request-vegetarian" />
           <label for="request-vegetarian">Japanese Vegetarian</label>
         </div>
         <div class="form-label">
-          <input type="checkbox" id="request-sauces" />
+          <input type="checkbox" name="sauces-masterclass" id="request-sauces" />
           <label for="request-sauces">Sauces Masterclass</label>
         </div>
 
         <div class="form-label">
           <label for="request-email">Email:</label>
-          <input type="email" id="request-email" />
+          <input type="email" name="email" id="request-email" />
         </div>
 
         <div class="align-right">
